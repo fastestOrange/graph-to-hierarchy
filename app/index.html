@@ -9,7 +9,8 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
-        <link rel="stylesheet" href="../bower_components/foundation/css/foundation.css" />
+        <!-- <link rel="stylesheet" href="../bower_components/foundation/css/foundation.css" /> -->
+        <link rel="stylesheet" href="http://cdn.jsdelivr.net/flexboxgrid/3.0.1/flexboxgrid.min.css">
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
@@ -24,192 +25,86 @@
 
         <div class="container">
             <header>
-                <dl class="sub-nav">
-                  <dt>Semtech Demo</dt>
-                  <dd class="active"><a href="#">Home</a></dd>
-                  <dd><a href="#">Browse History</a></dd>
-                  <dd><a href="#">Logout</a></dd>
-                </dl>
                
             </header>
-          
             <div class="row">
-                <div class="large-2 columns">
-                    <dl class="accordion" data-accordion>
-                      <dd class="accordion-navigation">
-                        <a class="filterBox_header" id="filterBox1_header" href="#filterBox1">Root Facets</a>
-                        <div id="filterBox1" class="filterBox content">
-                            <label for="person_filter"><input type="checkbox" id="person_filter">Person</label>
-                            <label for="object_filter"><input type="checkbox" id="object_filter">Object</label>
-                            <label for="location_filter"><input type="checkbox" id="location_filter">Location</label>
-                            <label for="event_filter"><input type="checkbox" id="event_filter">Event</label>
-                        </div>
-                      </dd>
-                    </dl>
-                </div>
-                <div class="large-5 columns">
-                    <dl class="accordion" data-accordion>
-                      <dd class="accordion-navigation">
-                        <a class="filterBox_header" id="filterBox1_header" href="#filterBox1">Second Level Predicates</a>
-                        <div id="filterBox1" class="filterBox content">
-                            <label for="subtype_filter_2"><input type="checkbox" id="subtype_filter_2">is type</label>
-                            <label for="was_born_filter_2"><input type="checkbox" id="was_born_filter_2">carries out</label>
-                            <label for="died_on_filter_2"><input type="checkbox" id="died_on_filter_2">associated with</label>
-                        </div>
-                      </dd>
-                    </dl>
-                </div>
-                <div class="large-5 columns">
-                    <dl class="accordion" data-accordion>
-                      <dd class="accordion-navigation">
-                        <a class="filterBox_header" id="filterBox1_header" href="#filterBox1">Third Level Predicates</a>
-                        <div id="filterBox1" class="filterBox content">
-                            <label for="subtype_filter_2"><input type="checkbox" id="subtype_filter_2">Subtype</label>
-                            <label for="was_born_filter_2"><input type="checkbox" id="was_born_filter_2">was born on</label>
-                            <label for="died_on_filter_2"><input type="checkbox" id="died_on_filter_2">died on</label>
-                            <label for="influecer_filter_2"><input type="checkbox" id="influecer_filter_2">is influencer of</label>
-                        </div>
-                      </dd>
-                    </dl>
-                
-                </div>
-
-            </div>
-
-           <section id="main" class="row">
-            <div class="large-2 columns column" id="rootColumn">
-                <div id="rootNode">
-                    <h3>PERSON</h3>
-                </div>
-            </div>
-            <div class="large-5 columns column" id="secondLevelColumn">
-              <div class="node">
-                  <div class="relation"></div>
-                   <div class="node_button">
-                      <dl class="accordion" data-accordion>
-                      <button id="author_button" class="button expand">
-                          Role
-                      </button>
-                        <dd class="accordion-navigation">
-                          <div id="author_node" class="expanded_node content">
-                              <label for="subtype_filter_2"><input type="checkbox" id="subtype_filter_2">Author</label>
-                              <label for="was_born_filter_2"><input type="checkbox" id="was_born_filter_2">Donor</label>
-                              <label for="died_on_filter_2"><input type="checkbox" id="died_on_filter_2">Artist</label>
-                          </div>
-                        </dd>
-                      </dl>
-                  </div>
-
-                  <div class="relation"></div>
-                    
-              </div>
-
-              <div class="node">
-                  <div class="relation"></div>
-                   <div class="node_button">
-                      <button class="button expand">
-                          Events
-                      </button>
-                  </div>
-
-                  <div class="relation"></div>
-                    
-              </div>
-
-              <div class="node">
-                  <div class="relation"></div>
-                   <div class="node_button">
-                      <button class="button expand">
-                          Places
-                      </button>
-                  </div>
-
-                  <div class="relation"></div>
-                    
-              </div>
-                  
-              
-
-            </div>
-
-
-            <div class="large-5 columns column" id="thirdLevelColumn">
-                <div class="node">
-                    <div class="relation"></div>
-                     <div class="node_button">
-                        <dl class="accordion" data-accordion>
-                        <button id="author_button" class="button expand">
-                            Name
-                        </button>
-                          <dd class="accordion-navigation">
-                            <div id="author_node" class="expanded_node content">
-                                <label for="subtype_filter_2"><input type="checkbox" id="subtype_filter_2">Subtype</label>
-                                <label for="was_born_filter_2"><input type="checkbox" id="was_born_filter_2">was born on</label>
-                                <label for="died_on_filter_2"><input type="checkbox" id="died_on_filter_2">died on</label>
-                                <label for="influecer_filter_2"><input type="checkbox" id="influecer_filter_2">is influencer of</label>
-                            </div>
-                          </dd>
-                        </dl>
-                    </div>
-
-                    <div class="relation"></div>
-                      
-                </div>
-
-                <div class="node">
-                    <div class="relation"></div>
-                     <div class="node_button">
-                        <button class="button expand">
-                            Events
-                        </button>
-                        <dl class="accordion" data-accordion>
-                          <dd class="accordion-navigation">
-                            <div id="artist_node" class="expanded_node content">
-                                <label for="subtype_filter_2"><input type="checkbox" id="subtype_filter_2">Subtype</label>
-                                <label for="was_born_filter_2"><input type="checkbox" id="was_born_filter_2">was born on</label>
-                                <label for="died_on_filter_2"><input type="checkbox" id="died_on_filter_2">died on</label>
-                                <label for="influecer_filter_2"><input type="checkbox" id="influecer_filter_2">is influencer of</label>
-                            </div>
-                          </dd>
-                        </dl>
-                    </div>
-
-                    <div class="relation"></div>
-                      
-                </div>
-
-                <div class="node">
-                    <div class="relation"></div>
-                     <div class="node_button">
-                        <button class="button expand">
-                            Objects
-                        </button>
-                        <dl class="accordion" data-accordion>
-                          <dd id="donor_node" class="accordion-navigation">
-                            <div class="expanded_node content">
-                                <label for="subtype_filter_2"><input type="checkbox" id="subtype_filter_2">Subtype</label>
-                                <label for="was_born_filter_2"><input type="checkbox" id="was_born_filter_2">was born on</label>
-                                <label for="died_on_filter_2"><input type="checkbox" id="died_on_filter_2">died on</label>
-                                <label for="influecer_filter_2"><input type="checkbox" id="influecer_filter_2">is influencer of</label>
-                            </div>
-                          </dd>
-                        </dl>
-                    </div>
-
-                    <div class="relation"></div>
-                      
-                </div>
-                    
-                
+                <nav>
+                    <h3>Semtech Demo</h3>
+                    <ul class="nav">
+                      <li class="active"><a href="#">Home</a></li>
+                      <li><a href="#">Browse History</a></li>
+                      <li><a href="#">Logout</a></li>
+                    </ul>
+                </nav>
                 
             </div>
-               
+           
+            <div class="filterBoxes row">
+
+                <div class="column-2-hand filterBox">
+                    <h4 class="filterBox_header">Root</h4>
+                    
+                </div>
+                <div class="column-5-hand filterBox">
+                    <h4 class="filterBox_header">Predicate Filter List</h4>
+                    <ul>
+                        <li><label for="person_filter"><input type="checkbox" id="person_filter" checked>Bibliography</label></li>
+                        <li><label for="object_filter"><input type="checkbox" id="object_filter" checked>Production</label></li>
+                        <li><label for="location_filter"><input type="checkbox" id="location_filter" checked>Constituents</label></li>
+                    </ul>
+                </div>
+                <div class="column-5-hand filterBox">
+                    <h4 class="filterBox_header">Predicate Filter List</h4>
+                    <ul>
+                        <li><label for="person_filter"><input type="checkbox" id="person_filter" checked>Biography</label></li>
+                        <li><label for="object_filter"><input type="checkbox" id="object_filter" checked>Bibiliography</label></li>
+                    </ul>
+                </div>
+
+            </div> 
+            <!-- END FILTERBOXES -->
+
+           <section id="tree" class="row">
+
+            <div class="column-2-hand">
+                <h5 id="rootNode">Man in Oriental Costume</h5>
+            </div>
+            <div class="column-5-hand column">
+              <div class="row nodeWrapper center" data-columnIndex="1">
+                   <div class="column-2-hand relation"></div>
+                   <div class="column-8-hand node">Bibliography</div>
+                   <div class="column-2-hand relation"> * </div>
+              </div>
+              <div class="row nodeWrapper center"  data-columnIndex="2">
+                   <div class="column-2-hand relation"></div>
+                   <div class="column-8-hand node">Production</div>
+                   <div class="column-2-hand relation"> * </div>
+              </div>
+              <div class="row nodeWrapper center"  data-columnIndex="3">
+                   <div class="column-2-hand relation"></div>
+                   <div class="column-8-hand node">Constituents</div>
+                   <div class="column-2-hand relation"> * </div>
+              </div>
+            </div>  
+              <div class="column-5-hand column"  data-Columnindex="1">
+                <div class="row nodeWrapper center" data-columnIndex="1">
+                     <div class="column-2-hand relation"></div>
+                     <div class="column-8-hand node">Bibliography</div>
+                     <div class="column-2-hand relation"> * </div>
+                </div>
+                <div class="row nodeWrapper center"  data-columnIndex="2">
+                     <div class="column-2-hand relation"></div>
+                     <div class="column-8-hand node">Biography</div>
+                     <div class="column-2-hand relation"> * </div>
+                </div>
+            
            </section>
+            <!-- END TREE -->
 
-            <div class="footer">
+            <div class="row footer">
                 
             </div>
-
+            <!-- END FOOTER -->
         </div>
 
 
@@ -221,7 +116,6 @@
         <script src="../bower_components/fastclick/lib/fastclick.js"></script>
         <script src="../bower_components/jquery.cookie/jquery.cookie.js"></script>
         <script src="../bower_components/jquery-placeholder/jquery.placeholder.js"></script>
-        <script src="../bower_components/foundation/js/foundation.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

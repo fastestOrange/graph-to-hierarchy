@@ -1,0 +1,11 @@
+{
+  "name": "3-proto",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.0",
+    "jqueryui": "~1.11.0",
+    "foundation": "~5.3.3",
+    "foundation-icons": "*"
+  },
+  "devDependencies": {}
+}

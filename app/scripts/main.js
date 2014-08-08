@@ -2,18 +2,9 @@
 
 // Cached Selectors
 
-var filterBoxHeader = $()
+var $filterBoxHeader = $('.filterBox_header');
 
-
-// EVENTS 
-
-$('#author_button').on('click', function(e){
-	e.preventDefault();
-	$('#author_button').toggleClass('success');
-	$('#author_node').toggleClass('active');
-});
-
-$('.filterBox_header').on('click', function(e){
-	e.preventDefault();
-	$('.filterBox').toggleClass('active')
+$filterBoxHeader.on('click', function(){
+	console.log("hey");
+	$filterBoxHeader.find('ul').toggle();	
 });

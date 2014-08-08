@@ -45,57 +45,61 @@
                     <h4 class="filterBox_header">Root</h4>
                     
                 </div>
-                <div class="column-5-hand filterBox">
+                <div class="column-1-hand spacer"></div>
+                <div class="column-4-hand filterBox">
                     <h4 class="filterBox_header">Predicate Filter List</h4>
-                    <ul>
-                        <li><label for="person_filter"><input type="checkbox" id="person_filter" checked>Bibliography</label></li>
-                        <li><label for="object_filter"><input type="checkbox" id="object_filter" checked>Production</label></li>
-                        <li><label for="location_filter"><input type="checkbox" id="location_filter" checked>Constituents</label></li>
+                    <ul class="filterBox_filters">
+                        <li><label for=""><input type="checkbox" checked>Bibliography</label></li>
+                        <li><label for=""><input type="checkbox" checked>Production</label></li>
+                        <li><label for=""><input type="checkbox" checked>Constituents</label></li>
                     </ul>
                 </div>
-                <div class="column-5-hand filterBox">
+                <div class="column-1-hand spacer"></div>
+                <div class="column-4-hand filterBox">
                     <h4 class="filterBox_header">Predicate Filter List</h4>
-                    <ul>
-                        <li><label for="person_filter"><input type="checkbox" id="person_filter" checked>Biography</label></li>
-                        <li><label for="object_filter"><input type="checkbox" id="object_filter" checked>Bibiliography</label></li>
+                    <ul class="filterBox_filters">
+                        <li><label for="" ><input type="checkbox" id="person_filter" checked>Biography</label></li>
+                        <li><label for=""><input type="checkbox" id="object_filter" checked>Bibiliography</label></li>
                     </ul>
                 </div>
 
             </div> 
             <!-- END FILTERBOXES -->
 
-           <section id="tree" class="row">
+           <section id="tree" class="row around-hand">
 
             <div class="column-2-hand">
-                <h5 id="rootNode">Man in Oriental Costume</h5>
+              <div id="rootNode">
+                <img src="http://upload.wikimedia.org/wikipedia/commons/9/92/Man_in_Oriental_Costume_(2).jpg" alt="Man in Oriental Costume" height="75" width="60">
+                <h5>Man in Oriental Costume</h5>
+              </div>
             </div>
-            <div class="column-5-hand column">
+
+            <div class="column-1-hand spacer"></div>
+            <div class="column-4-hand column">
               <div class="row nodeWrapper center" data-columnIndex="1">
-                   <div class="column-2-hand relation"></div>
-                   <div class="column-8-hand node">Bibliography</div>
-                   <div class="column-2-hand relation"> * </div>
+                   <div class="column-auto-hand node">Bibliography </div><span class="arrow"></span>
               </div>
               <div class="row nodeWrapper center"  data-columnIndex="2">
-                   <div class="column-2-hand relation"></div>
-                   <div class="column-8-hand node">Production</div>
-                   <div class="column-2-hand relation"> * </div>
+                   <div class="column-auto-hand node">Production</div><span class="arrow"></span>
               </div>
               <div class="row nodeWrapper center"  data-columnIndex="3">
-                   <div class="column-2-hand relation"></div>
-                   <div class="column-8-hand node">Constituents</div>
-                   <div class="column-2-hand relation"> * </div>
+                   <div class="column-auto-hand node">Constituents</div><span class="arrow"></span>
               </div>
             </div>  
-              <div class="column-5-hand column"  data-Columnindex="1">
+
+
+              <div class="column-1-hand spacer"></div>
+              <div class="column-4-hand column">
                 <div class="row nodeWrapper center" data-columnIndex="1">
-                     <div class="column-2-hand relation"></div>
-                     <div class="column-8-hand node">Bibliography</div>
-                     <div class="column-2-hand relation"> * </div>
+
+                     <div class="column-auto-hand node">Bibliography</div><span class="arrow"></span>
+
                 </div>
                 <div class="row nodeWrapper center"  data-columnIndex="2">
-                     <div class="column-2-hand relation"></div>
-                     <div class="column-8-hand node">Biography</div>
-                     <div class="column-2-hand relation"> * </div>
+
+                     <div class="column-auto-hand node">Biography</div><span class="arrow"></span>
+
                 </div>
             
            </section>

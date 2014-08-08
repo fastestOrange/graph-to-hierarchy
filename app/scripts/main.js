@@ -21,6 +21,5 @@ $filterBox.on('click', function(){
 
 // node slie down
 $arrow.on('click', function(){
-	console.log("hey");
 	$(this).parent().next().slideToggle();
 });

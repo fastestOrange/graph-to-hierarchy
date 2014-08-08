@@ -30,6 +30,8 @@
             <div class="row">
                 <nav>
                     <h3>Semtech Demo</h3>
+                    <p>Current Commit: Minimmum Nodes inside Node Grouping</p>
+                    <p>Next Commit: From root to 3rd level progressive reveal</p>
                     <ul class="nav">
                       <li class="active"><a href="#">Home</a></li>
                       <li><a href="#">Browse History</a></li>
@@ -70,7 +72,7 @@
 
             <div class="column-2-hand">
               <div id="rootNode">
-                <img src="http://upload.wikimedia.org/wikipedia/commons/9/92/Man_in_Oriental_Costume_(2).jpg" alt="Man in Oriental Costume" height="75" width="60">
+                <img src="./images/man_in_oriental_costume.jpg" alt="Man in Oriental Costume" height="75" width="60">
                 <h5>Man in Oriental Costume</h5>
               </div>
             </div>
@@ -81,12 +83,9 @@
                    <div class="column-auto-hand node">Bibliography</div>
                    <span class="arrow"></span>
               </div>
-              <div class="openNode">
+              <div class="row openNode">
                   <ul>
-                      <li><label for="" ><input type="checkbox" id="person_filter" checked>Dummy Predicate Option</label></li>
-                      <li><label for=""><input type="checkbox" id="object_filter" checked>Dummy Predicate Option</label></li>
-                      <li><label for="" ><input type="checkbox" id="person_filter" checked>Dummy Instance Option</label></li>
-                      <li><label for=""><input type="checkbox" id="object_filter" checked>Dummy Instance Option</label></li>
+                      <li>Not in Demo</li>
                   </ul>
               </div>
 
@@ -94,12 +93,9 @@
                    <div class="column-auto-hand node">Production</div>
                    <span class="arrow"></span>
               </div>
-              <div class="openNode">
+              <div class="row openNode">
                   <ul>
-                    <li><label for="" ><input type="checkbox" id="person_filter" checked>Dummy Predicate Option</label></li>
-                    <li><label for=""><input type="checkbox" id="object_filter" checked>Dummy Predicate Option</label></li>
-                    <li><label for="" ><input type="checkbox" id="person_filter" checked>Dummy Instance Option</label></li>
-                    <li><label for=""><input type="checkbox" id="object_filter" checked>Dummy Instance Option</label></li>
+                    <li>Not in Demo</li>
                   </ul>
               </div>
               
@@ -107,13 +103,18 @@
                    <div class="column-auto-hand node">Constituents</div>
                    <span class="arrow"></span>
               </div>
-              <div class="openNode">
-                  <ul>
-                    <li><label for="" ><input type="checkbox" id="person_filter" checked>Dummy Predicate Option</label></li>
-                    <li><label for=""><input type="checkbox" id="object_filter" checked>Dummy Predicate Option</label></li>
-                    <li><label for="" ><input type="checkbox" id="person_filter" checked>Dummy Instance Option</label></li>
-                    <li><label for=""><input type="checkbox" id="object_filter" checked>Dummy Instance Option</label></li>
-                  </ul>
+              <div class="row openNode">
+                  <div class="column-auto-hand">
+                      <div class="row predicateHeader">has known creator</div>
+                        <div class="predicateNode">Rembrandt van Rijn</div>
+                        <div class="predicateNode">Rembrandt Workshop</div>
+                      <div class=" row predicateHeader">has possible creator</div>
+                        <div class="predicateNode">Goveart Flinck</div>
+                      <div class="row predicateHeader">has former owner</div>
+                        <div class="predicateNode">Some Dutch Merchant</div>
+                        <div class="predicateNode">Another Butch Merchant</div>
+                        <div class="predicateNode">An art dealer</div>
+                  </div>
               </div>
             </div>  
 
@@ -158,9 +159,9 @@
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
-        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
-        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="./scripts/vendor/modernizr.js"></script>
+        <script type="text/javascript" src="./scripts/vendor/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="./scripts/vendor/jquery-ui-1.11.0/jquery-ui.min.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

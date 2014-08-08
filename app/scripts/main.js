@@ -2,9 +2,10 @@
 
 // Cached Selectors
 
-var $filterBoxHeader = $('.filterBox_header');
+var $filterBox = $('.filterBox');
 
-$filterBoxHeader.on('click', function(){
-	console.log("hey");
-	$filterBoxHeader.find('ul').toggle();	
+$filterBox .find('ul').hide()
+
+$filterBox.on('click', function(){
+	$(this).find('ul').slideToggle();
 });

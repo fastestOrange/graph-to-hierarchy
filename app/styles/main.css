@@ -176,6 +176,8 @@ header {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     -khtml-border-radius: 5px;
+    width: 150px;
+    height: 150px;
     border-radius: 5px;
     margin: 10px 5px 0px;
     display: block;

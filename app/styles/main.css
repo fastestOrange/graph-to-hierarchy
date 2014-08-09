@@ -127,6 +127,15 @@ header {
     border-color: #FFF transparent transparent transparent;
 }
 
+.arrow:hover::before{
+    border-color: lightblue transparent transparent transparent;
+}
+
+.arrow:hover + .node{
+    border: 3px solid rgba(51, 51, 51,0.2);
+}
+
+
 
 .filterBoxes{
     
@@ -182,6 +191,16 @@ header {
     position: relative;
 }
 
+.nodeWrapper:hover > .node{
+    border: 3px solid rgba(51, 51, 51,0.2);
+}
+
+.nodeWrapper:hover > .arrow::before{
+    border-color: lightblue transparent transparent transparent;
+}
+
+
+
 .predicateHeader{
     font-weight: bold;
     background-color: lightyellow;
@@ -208,6 +227,20 @@ header {
 
 .predicateNode:hover{
     background-color: lightblue;
+}
+
+
+.rootFromHere{
+    font-size: .8em;
+    float: right;
+    left: 10;
+}
+
+.rootFromHere:hover{
+    font-size: .8em;
+    float: right;
+    left: 10;
+    text-decoration: underline;
 }
 
 

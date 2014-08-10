@@ -56,7 +56,6 @@ $predicateNode.hover(
 
 var menuTipClick = function(obj){
 	var selected = obj.parent().find('h4');
-	obj.text('Collapse');
 	selected.css('background-color', 'orange');
 
 

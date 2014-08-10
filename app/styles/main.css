@@ -5,6 +5,10 @@
     padding: 0.2em 0;
 }
 
+h4{
+    margin: 0;
+}
+
 .container{
     margin: auto;
     font-family: helvetica;
@@ -213,7 +217,7 @@ header {
     border: 1px solid lightgrey;
 }
 
-.predicateNode{
+.predicateNode h4{
     margin: 10px;
     overflow: hidden;
     width: inherit;
@@ -227,9 +231,78 @@ header {
     border-radius: 10px;
 }
 
-.predicateNode:hover{
+
+.predicateNode:hover > h4{
     background-color: lightblue;
 }
+
+.predicateNode {
+  position: relative;
+  display: inline;
+}
+.predicateNode span {
+  position: absolute;
+  width:100px;
+  color: #999999;
+  background: #FFFFFF;
+  border: 1px solid #6D6D6D;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 20px;
+}
+.predicateNode span:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -12px;
+  width: 0; height: 0;
+  border-right: 12px solid #6D6D6D;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+.predicateNode span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -8px;
+  width: 0; height: 0;
+  border-right: 8px solid #FEFFF7;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+.predicateNode:hover span {
+  visibility: visible;
+  opacity: 0.8;
+  left: 100%;
+  top: 50%;
+  margin-top: -18px;
+  margin-left: -10px;
+  z-index: 999;
+  cursor: default;
+  text-decoration: underline;
+}
+
+.menuTip::hover{
+    cursor: default;
+    visibility: visible;
+    opacity: 0.8;
+    left: 100%;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: 15px;
+    z-index: 999;
+}
+
+.selectedNode{
+    background-color: orange !important;
+    width: 110%;
+
+}
+
 
 
 .rootFromHere{

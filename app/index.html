@@ -10,6 +10,7 @@
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
         <!-- <link rel="stylesheet" href="../bower_components/foundation/css/foundation.css" /> -->
+        <link rel="stylesheet" href="./scripts/vendor/jquery-ui-1.11.0/jquery-ui.min.css">
         <link rel="stylesheet" href="http://cdn.jsdelivr.net/flexboxgrid/3.0.1/flexboxgrid.min.css">
         <!-- endbower -->
         <!-- endbuild -->
@@ -77,7 +78,7 @@
               </div>
             </div>
 
-            <div class="column-1-hand spacer"></div>
+            <div id="1to2" class="column-1-hand spacer"></div>
             <div class="column-4-hand column">
               <div class="row nodeWrapper center" data-columnIndex="1">
                    <div class="column-auto-hand node">Bibliography</div>
@@ -106,20 +107,35 @@
               <div class="row openNode">
                   <div class="column-auto-hand">
                       <div class="row predicateHeader">has known creator</div>
-                        <div class="predicateNode">Rembrandt van Rijn</div>
-                        <div class="predicateNode">Rembrandt Workshop</div>
+                        <div class="predicateNode">
+                            <h4>Rembrandt van Rijn</h4>
+                        </div>
+
+                        <div class="predicateNode">
+                            <h4>Rembrandt Workshop</h4>
+
+                        </div>
                       <div class=" row predicateHeader">has possible creator</div>
-                        <div class="predicateNode">Goveart Flinck</div>
+                        <div class="predicateNode">
+                            <h4>Goveart Flinck</h4>
+                        </div>
                       <div class="row predicateHeader">has former owner</div>
-                        <div class="predicateNode">Some Dutch Merchant</div>
-                        <div class="predicateNode">Another Butch Merchant</div>
-                        <div class="predicateNode">An art dealer<span class="rootFromHere"><a>Root from here</a></span></div>
+                        <div class="predicateNode">
+                            <h4>Some Dutch Merchant</h4>
+                        </div>
+                        <div class="predicateNode">
+                            <h4>Another Butch Merchant</h4>
+                        </div>
+                        <div class="predicateNode">
+                            <h4>An art dealer</h4>
+                        </div>
+
                   </div>
               </div>
             </div>  
 
 
-              <div class="column-1-hand spacer"></div>
+              <div id="2to3" class="column-1-hand spacer"></div>
               <div class="column-4-hand column">
 
                 <div class="row nodeWrapper center" data-columnIndex="1">

@@ -1,5 +1,8 @@
 'use strict';
 
+// flags
+var nodeSelected = false;
+
 // Cached Selectors
 
 var $filterBox = $('.filterBox');
@@ -33,6 +36,59 @@ $("#rootNode").sticky({topSpacing:20});
 
 // predicate Nodes
 
-$predicateNode.on("mouseenter", function(){
-	$rootFromHere.show();
-});
+$predicateNode.hover(
+  function() {
+    var menuTip = $('<span>Expand</span>');
+    menuTip.addClass('menuTip')
+    $(this).append(menuTip);
+    menuTip.click(function(){
+    	if(!nodeSelected){
+    	  menuTipClick($(this));
+    	}else{
+    		menuTipReset($(this));
+    	}
+    }); 
+  }, function() {
+    $( this ).find( '.menuTip' ).remove();
+  }
+);
+
+
+var menuTipClick = function(obj){
+	var selected = obj.parent().find('h4');
+	obj.text('Collapse');
+	selected.css('background-color', 'orange');
+
+
+	// do more stuff to show new level
+	nodeSelected = true;
+	}
+
+	var menuTipReset = function(obj){
+		var selected = obj.parent().find('h4');
+		// selected.css('background-color', 'white');
+		selected.removeAttr("style")
+		nodeSelected = false;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

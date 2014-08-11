@@ -26,48 +26,30 @@
 
         <div class="container">
             <header>
-               
+                <div class="row">
+                    <nav>
+                        <h3>Semtech Demo</h3>
+                        <ul class="nav">
+                          <li class="active"><a href="#">Home</a></li>
+                          <li><a href="#">Browse History</a></li>
+                          <li><a href="#">Logout</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </header>
-            <div class="row">
-                <nav>
-                    <h3>Semtech Demo</h3>
-                    <p>Current Commit: Incomplete node selection interaction</p>
-                    <p>Next Commit: Complete node selection interaction</p>
-                    <ul class="nav">
-                      <li class="active"><a href="#">Home</a></li>
-                      <li><a href="#">Browse History</a></li>
-                      <li><a href="#">Logout</a></li>
-                    </ul>
-                </nav>
-                
-            </div>
            
-            <div class="filterBoxes row">
-
-                <div class="column-2-hand filterBox">
-                    <h4 class="filterBox_header">Root</h4>
-                    
-                </div>
+            <div class="filterBoxes row between-hand">
+    
+                <div class="column-2-hand filterBox"></div>
                 <div class="column-1-hand spacer"></div>
-                <div class="column-4-hand filterBox">
-                    <h4 class="filterBox_header">Predicate Filter List</h4>
-                    <ul class="filterBox_filters">
-                        <li><label for=""><input type="checkbox" checked>Bibliography</label></li>
-                        <li><label for=""><input type="checkbox" checked>Production</label></li>
-                        <li><label for=""><input type="checkbox" checked>Constituents</label></li>
-                    </ul>
-                </div>
+                <div class="column-4-hand filterBox"></div>
                 <div class="column-1-hand spacer"></div>
-                <div class="column-4-hand filterBox">
-                    <h4 class="filterBox_header">Predicate Filter List</h4>
-                    <ul class="filterBox_filters">
-                        <li><label for="" ><input type="checkbox" id="person_filter" checked>Biography</label></li>
-                        <li><label for=""><input type="checkbox" id="object_filter" checked>Bibiliography</label></li>
-                    </ul>
-                </div>
+                <div class="column-4-hand filterBox"></div>
 
             </div> 
-            <!-- END FILTERBOXES -->
+    
+           <canvas id="secondLevel" width="130" height="1000"></canvas>
+           <canvas id="thirdLevel" width="130" height="1000"></canvas>
 
            <section id="tree" class="row around-hand">
 
@@ -77,10 +59,10 @@
                 <h5>Man in Oriental Costume</h5>
               </div>
             </div>
-
+        
             <div id="1to2" class="column-1-hand spacer"></div>
             <div class="column-4-hand column">
-              <div class="row nodeWrapper center" data-columnIndex="1">
+              <div class="row nodeWrapper center" data-col2Index="1">
                    <div class="column-auto-hand node">Bibliography</div>
                    <span class="arrow"></span>
               </div>
@@ -90,7 +72,7 @@
                   </ul>
               </div>
 
-              <div class="row nodeWrapper center"  data-columnIndex="2">
+              <div class="row nodeWrapper center"  data-col2Index="2">
                    <div class="column-auto-hand node">Production</div>
                    <span class="arrow"></span>
               </div>
@@ -100,7 +82,7 @@
                   </ul>
               </div>
               
-              <div class="row nodeWrapper center"  data-columnIndex="3">
+              <div class="row nodeWrapper center"  data-col2Index="3">
                    <div class="column-auto-hand node">Constituents</div>
                    <span class="arrow"></span>
               </div>
@@ -113,7 +95,6 @@
 
                         <div class="predicateNode">
                             <h4>Rembrandt Workshop</h4>
-
                         </div>
                       <div class=" row predicateHeader">has possible creator</div>
                         <div class="predicateNode">
@@ -132,13 +113,49 @@
 
                   </div>
               </div>
+              <div class="row nodeWrapper center"  data-col2Index="4">
+                   <div class="column-auto-hand node">Event</div>
+                   <span class="arrow"></span>
+              </div>
+              <div class="row openNode">
+                  <ul>
+                    <li>Not in Demo</li>
+                  </ul>
+              </div>
+              <div class="row nodeWrapper center"  data-col2Index="5">
+                   <div class="column-auto-hand node">Subject</div>
+                   <span class="arrow"></span>
+              </div>
+              <div class="row openNode">
+                  <ul>
+                    <li>Not in Demo</li>
+                  </ul>
+              </div>
+              <div class="row nodeWrapper center"  data-col2Index="6">
+                   <div class="column-auto-hand node">Representation</div>
+                   <span class="arrow"></span>
+              </div>
+              <div class="row openNode">
+                  <ul>
+                    <li>Not in Demo</li>
+                  </ul>
+              </div>
+              <div class="row nodeWrapper center"  data-col2Index="7">
+                   <div class="column-auto-hand node">Document/Manuscript</div>
+                   <span class="arrow"></span>
+              </div>
+              <div class="row openNode">
+                  <ul>
+                    <li>Not in Demo</li>
+                  </ul>
+              </div>
             </div>  
 
 
               <div id="2to3" class="column-1-hand spacer"></div>
               <div class="column-4-hand column">
 
-                <div class="row nodeWrapper center" data-columnIndex="1">
+                <div class="row nodeWrapper center" data-col3Index="1">
                      <div class="column-auto-hand node">Bibliography</div>
                      <span class="arrow"></span>
                 </div>
@@ -179,6 +196,7 @@
         <script type="text/javascript" src="./scripts/vendor/jquery-1.11.1.js"></script>
         <script type="text/javascript" src="./scripts/vendor/jquery-ui-1.11.0/jquery-ui.min.js"></script>
         <script type="text/javascript" src="./scripts/vendor/jquery.sticky.js"></script>
+        <script type="text/javascript" src="./scripts/vendor/jcanvas.min.js"></script>
         
         <!-- endbower -->
         <!-- endbuild -->
@@ -193,11 +211,37 @@
         //     ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
+        <script>
+             // function writeMessage(canvas, message) {
+             //   var context = canvas.getContext('2d');
+             //   context.clearRect(0, 0, canvas.width, canvas.height);
+             //   context.font = '18pt Calibri';
+             //   context.fillStyle = 'black';
+             //   context.fillText(message, 10, 25);
+             // }
+             function getMousePos(canvas, evt) {
+               var rect = canvas.getBoundingClientRect();
+               return {
+                 x: evt.clientX - rect.left,
+                 y: evt.clientY - rect.top
+               };
+             }
+             var canvas = document.getElementById('secondLevel');
+             var context = canvas.getContext('2d');
+
+             canvas.addEventListener('click', function(evt) {
+               var mousePos = getMousePos(canvas, evt);
+               var message = mousePos.x + ',' + mousePos.y;
+               console.log(message);
+             }, false);
+           </script>
+
         <!-- build:js scripts/plugins.js -->
         
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/drawLines.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

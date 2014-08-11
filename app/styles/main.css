@@ -14,6 +14,23 @@ h4{
     font-family: helvetica;
 
 }
+canvas#secondLevel{
+    position: absolute;
+    top: 263px;
+    left: 225px;
+    z-index: 3;
+    /*background-color: lightgrey;*/
+    
+}
+
+canvas#thirdLevel{
+    position: absolute;
+    top: 263px;
+    left: 682px;
+    z-index: 3;
+    /*background-color: lightgrey;*/
+    
+}
 
 /* Space out content a bit */
 body {
@@ -24,8 +41,7 @@ body {
 /* Everything but the jumbotron gets side spacing for mobile first views */
 header,
 .footer {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 30px;
 }
 
 /* Custom page header */
@@ -82,13 +98,34 @@ header {
 
 /* MAIN */
 #tree{
-    height: 2000px;
+    height: 1000px;
+    padding-top: 20px;
 }
 
 .column{
     height: inherit;
-    border: 3px solid lightgrey;
+    border: 1px solid lightgrey;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -khtml-border-radius: 30px;
+    border-radius: 30px;
 }
+
+#rootNode{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    margin: 10px 5px 0px;
+    display: block;
+    background-color: lightgrey;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 10px 5px;
+}
+
 .node{
     font-size: 1.2em;
     line-height: 40px;
@@ -139,57 +176,13 @@ header {
     border: 3px solid rgba(51, 51, 51,0.2);
 }
 
-
-
 .filterBoxes{
-    
+    height: 50px;
+    padding-top: 40px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
 }
 
-
-.filterBox ul{
-    min-height: 85px;
-    margin: 0px;
-    padding: 5px 30px 0px;
-    list-style: none;
-    background-color:rgba(207, 83, 0,0.5);
-    z-index: 9999;
-}
-
-.filterBox li{ 
-  display: block;
-  font-size: 1em;
-  list-style: none;
-}
-
-.filterBox input{
-
-}
-
-.filterBox h4{
-    
-    font-family: helvetica;
-    border: 2px solid black;
-    line-height: 50px;
-    background-color:rgba(51, 51, 51,0.2);
-    color: black;
-    margin: 40px 0 0 0;
-    text-align: center;
-}
-
-#rootNode{
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -khtml-border-radius: 5px;
-    width: 150px;
-    height: 150px;
-    border-radius: 5px;
-    margin: 10px 5px 0px;
-    display: block;
-    background-color: lightgrey;
-    font-size: 18px;
-    text-align: center;
-    padding: 10px 10px 5px;
-}
 
 .nodeWrapper{
     height: auto;
@@ -322,7 +315,7 @@ header {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 1200px;
+        max-width: 1100px;
     }
 
     /* Remove the padding we set earlier */

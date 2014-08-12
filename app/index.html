@@ -156,19 +156,42 @@
               <div class="column-4-hand column">
 
                 <div class="row nodeWrapper center" data-col3Index="1">
-                     <div class="column-auto-hand node">Bibliography</div>
+                     <div class="column-auto-hand node">Production</div>
                      <span class="arrow"></span>
                 </div>
-                <div class="openNode">
-                    <ul>
-                      <li><label for="" ><input type="checkbox" id="person_filter" checked>Dummy Predicate Option</label></li>
-                      <li><label for=""><input type="checkbox" id="object_filter" checked>Dummy Predicate Option</label></li>
-                      <li><label for="" ><input type="checkbox" id="person_filter" checked>Dummy Instance Option</label></li>
-                      <li><label for=""><input type="checkbox" id="object_filter" checked>Dummy Instance Option</label></li>
-                    </ul>
+                <div class="row openNode">
+                    <div class="column-auto-hand">
+
+                        <div class="row predicateHeader">commissioned by (1)</div>
+                          <div class="predicateNode">
+                              <h4>Kiliaen van Rensselaer</h4>
+                          </div>
+
+                        <div class=" row predicateHeader">same creation time-span as (1)</div>
+                          <div class="predicateNode">
+                              <h4>Saskia van Uylenburgh, the Wife of the Artist</h4>
+                          </div>
+                        <div class="row predicateHeader">same production location as (7)</div>
+                          <div class="predicateNode">
+                              <h4>Kiliaen van Rensselaer</h4>
+                          </div>
+                          <div class="predicateNode">
+                              <h4>Overflow</h4>
+                          </div>
+                          <div class="predicateNode">
+                              <h4>Overflow</h4>
+                          </div>
+                          <div class="predicateNode">
+                              <h4>Overflow</h4>
+                          </div>
+                          <div class="predicateNode">
+                              <h4>Overflow</h4>
+                          </div>
+
+                    </div>
                 </div>
                 <div class="row nodeWrapper center"  data-columnIndex="2">
-                     <div class="column-auto-hand node">Biography</div>
+                     <div class="column-auto-hand node">Constituent</div>
                      <span class="arrow"></span>
                 </div>
                 <div class="openNode">
@@ -196,7 +219,7 @@
         <script type="text/javascript" src="./scripts/vendor/jquery-1.11.1.js"></script>
         <script type="text/javascript" src="./scripts/vendor/jquery-ui-1.11.0/jquery-ui.min.js"></script>
         <script type="text/javascript" src="./scripts/vendor/jquery.sticky.js"></script>
-        <script type="text/javascript" src="./scripts/vendor/jcanvas.min.js"></script>
+        <script type="text/javascript" src="./scripts/vendor/zino-ui-1.4/zino-1.4.custom.min.js"></script>
         
         <!-- endbower -->
         <!-- endbuild -->
@@ -243,6 +266,7 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/drawLines.js"></script>
         <script src="scripts/main.js"></script>
+        <script src="scripts/linkingLine.js"></script>
         <!-- endbuild -->
 </body>
 </html>

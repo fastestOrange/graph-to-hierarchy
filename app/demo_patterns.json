@@ -1,0 +1,166 @@
+{
+  "root": {
+    "title": "Man in Oriental Costume",
+    "image": "** image location **",
+    "level": 1,
+    "predicates": [
+      {
+        "name": "Bibliography",
+        "checked": true,
+        "level": 2,
+        "sub-predicates": []
+      },
+      {
+        "name": "Production",
+        "checked": true,
+        "level": 2,
+        "sub-predicates": []
+      },
+      {
+        "name": "Constituent",
+        "checked": true,
+        "level": 2,
+        "sub-predicates": [
+          {
+            "name": "has known creator",
+            "checked": true,
+            "level": 3,
+            "instances": [
+              {
+                "title": "Rembrandt van Rijn",
+                "predicates": [
+                  {
+                    "name": "Bibliography",
+                    "checked": false,
+                    "level": 3,
+                    "sub-predicates": []
+                  },
+                  {
+                    "name": "Production",
+                    "checked": true,
+                    "level": 3,
+                    "sub-predicates": [
+                      {
+                        "name": "commissioned by",
+                        "checked": true,
+                        "level": 3,
+                        "instances": [
+                          {
+                            "title": "Kiliaen van Rensselaer"
+                          },
+                          {
+                            "title": "Goveart Flink"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "same creation time-span as",
+                        "checked": true,
+                        "level": 3,
+                        "instances": [
+                          {
+                            "title": "Saskia van Uylenburgh, the Wife of the Artist"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "same production location as",
+                        "checked": true,
+                        "level": 3,
+                        "instances": [
+                          {
+                            "title": "Saskia van Uylenburgh, the Wife of the Artist"
+                          },
+                          {
+                            "title": "The Crucifixion"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Event",
+                    "checked": false,
+                    "level": 3,
+                    "sub-predicates": []
+                  },
+                  {
+                    "name": "Subject",
+                    "checked": false,
+                    "level": 3,
+                    "sub-predicates": []
+                  },
+                  {
+                    "name": "Document/Manuscript",
+                    "checked": false,
+                    "level": 3,
+                    "sub-predicates": []
+                  }
+                ]
+              },
+              {
+                "title": "Rembrandt Workshop"
+              }
+            ]
+          },
+          {
+            "name": "has possible creator",
+            "checked": true,
+            "level": 2,
+            "instances": [
+              {
+                "title": "Goveart Flinck"
+              }
+            ]
+          },
+          {
+            "name": "has former owner",
+            "checked": true,
+            "level": 2,
+            "instances": [
+              {
+                "title": "Some dutch merchant"
+              },
+              {
+                "title": "Another Dutch merchant"
+              },
+              {
+                "title": "An art dealer"
+              }
+            ]
+          },
+          {
+            "name": "has current owner",
+            "checked": false,
+            "level": 2,
+            "instances": []
+          }
+        ]
+      },
+      {
+        "name": "Event",
+        "checked": false,
+        "level": 2,
+        "sub-predicates": []
+      },
+      {
+        "name": "Subject",
+        "checked": false,
+        "level": 2,
+        "sub-predicates": []
+      },
+      {
+        "name": "Representation",
+        "checked": false,
+        "level": 2,
+        "sub-predicates": []
+      },
+      {
+        "name": "Document/Manuscript",
+        "checked": false,
+        "level": 2,
+        "sub-predicates": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+
+root
+  title = Man in Oriental Costume
+  image = ** image location **
+  predicates[0] 
+    name = Bibilography
+    checked b = true
+    sub-predicates[0]
+  predicates[1]
+    name = Production
+    checked b = true
+    sub-predicates[0]
+  predicates[2]
+    name = Constituent
+    checked b = true
+    sub-predicates[0]
+      name = has known creator
+      checked b = true
+      instances[0]
+        title = Rembrandt van Rijn
+        predicates[0]
+          name = Bibliography
+          checked b = false
+          sub-predicates[0]
+        predicates[1]
+          name = Production
+          checked b = true
+          sub-predicates[0]
+            name =  commissioned by
+            checked b = true
+            instances[0]
+              title = Kiliaen van Rensselaer
+          sub-predicates[1]
+            name = same creation time-span as
+            checked b = true
+            instances[0]
+              title = Saskia van Uylenburgh, the Wife of the Artist
+          sub-predicates[2]
+            name = same production location as
+            checked b = true
+            instances[0]
+              title = Saskia van Uylenburgh, the Wife of the Artist
+            instances[1]
+              title = The Crucifixion
+        predicates[1]
+          name = Constituent
+          checked b = true
+          sub-predicates[0]
+            name = has creative collaborators
+            checked b = true
+            instances[0]
+              title = Rembrandt Workshop
+            instances[1]
+              title = Goveart Flink
+        predicates[2]
+          name = Event
+          checked b = false
+          sub-predicates[0]
+        predicates[3]
+          name = Subject
+          checked b = false
+          sub-predicates[0]
+        predicates[4]
+          name = Document/Manuscript
+          checked b = false
+          sub-predicates[0]
+      instances[1]
+        title = Rembrandt Workshop
+    sub-predicates[1]
+      name = has possible creator
+      checked b = true
+       instances[0]
+        title = Goveart Flinck
+    sub-predicates[2]
+      name = has former owner
+      checked b = true
+       instances[0]
+        title = Some dutch merchant
+       instances[1]
+        title = Another Dutch merchant
+       instances[2]
+        title = An art dealer
+    sub-predicates[3]
+      name = has current owner
+      checked b = false
+      instances[0]
+  predicates[3]
+    name = Event
+    checked b = false
+    sub-predicates[0]
+  predicates[4]
+    name = Subject
+    checked b = false
+    sub-predicates[0]
+  predicates[5]
+    name = Representation
+    checked b = false
+    sub-predicates[0]
+  predicates[6]
+    name = Document/Manuscript
+    checked b = false
+    sub-predicates[0]

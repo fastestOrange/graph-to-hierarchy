@@ -1,3 +1,18 @@
+/*line*/
+
+.linkLine {
+    position: absolute;
+    width: 3px;
+    background-color: #06a;
+    z-index: 100;
+    -webkit-transform-origin: top left;
+    -moz-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+}
+
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -124,6 +139,7 @@ header {
     font-size: 18px;
     text-align: center;
     padding: 10px 10px 5px;
+    z-index: 3;
 }
 
 .node{
@@ -239,8 +255,8 @@ header {
   color: #999999;
   background: #FFFFFF;
   border: 1px solid #6D6D6D;
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   visibility: hidden;
   border-radius: 20px;
@@ -272,8 +288,8 @@ header {
   opacity: 0.8;
   left: 100%;
   top: 50%;
-  margin-top: -18px;
-  margin-left: -10px;
+  margin-top: -20px;
+  margin-left: -20px;
   z-index: 999;
   cursor: default;
   text-decoration: underline;
@@ -296,20 +312,12 @@ header {
 
 }
 
-
-
-.rootFromHere{
-    font-size: .8em;
-    float: right;
-    left: 10;
+.openNode{
+    /*max-height: 150px;*/
+/*    overflow-y:scroll;
+    overflow-x:inherit;*/
 }
 
-.rootFromHere:hover{
-    font-size: .8em;
-    float: right;
-    left: 10;
-    text-decoration: underline;
-}
 
 
 /* Responsive: Portrait tablets and up */

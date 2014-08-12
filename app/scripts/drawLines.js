@@ -57,27 +57,15 @@
         // drawToSecondNodes(8, 76, 7);
 
         // create a new line object
-        var line1=new Line(8,76,130,26);
-        var line2=new Line(8,76,130,97);
-        var line3=new Line(8,76,130,168);
-        var line4=new Line(8,76,130,239);
-        var line5=new Line(8,76,130,310);
-        var line6=new Line(8,76,130,381);
-        var line7=new Line(8,76,130,452);
+        // var line1=new Line(8,76,130,26);
+        // var line2=new Line(8,76,130,97);
+        // var line3=new Line(8,76,130,168);
+        // var line4=new Line(8,76,130,239);
+        // var line5=new Line(8,76,130,310);
+        // var line6=new Line(8,76,130,381);
+        // var line7=new Line(8,76,130,452);
 
-        redrawLines();
-
-        function redrawLines(){
-            secondContext.clearRect(0, 0, canvas.width, canvas.height);
-            // draw the line
-            line1.drawWithArrowheads(secondContext);
-            line2.drawWithArrowheads(secondContext);
-            line3.drawWithArrowheads(secondContext);
-            line4.drawWithArrowheads(secondContext);
-            line5.drawWithArrowheads(secondContext);
-            line6.drawWithArrowheads(secondContext);
-            line7.drawWithArrowheads(secondContext);   
-        }
+       
  
 
 

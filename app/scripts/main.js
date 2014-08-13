@@ -23,17 +23,11 @@ $openNode.hide();
 
 
 // node slie down
-$nodeWrapper.on('click', function(){
-	$(this).next().slideToggle();
-
-});
-
-$('div[data-col2Index="3"]').click(function(){
-	
-});
-
-$('#rootNode').on('change', function(){
-	console.log(this);
+$nodeWrapper.on('click', function(e){
+  var previousOffsetTop = e.currentTarget.offsetTop;
+	$(this).next().slideToggle(function(){
+      $nodeWrapper.trigger("testEvent");
+  });
 
 });
 
@@ -45,19 +39,10 @@ $predicateNode.data('selected', false);
 
 $predicateNode.hover(
   function() {
-    var menuTip = $('<span></span>');
+    var selectedNode = $(this)
+    var menuTip = $('<span>Expand</span>').appendTo(selectedNode);
     menuTip.addClass('menuTip');
-    menuTip.text(function(){
-  		var test = $(this).closest('.predicateNode');
-    	if(!$(this).parent().data('selected')){
-    	
-    		return 'Expand';
-    	}else{
-    	
-    		return 'Collapse';
-    	}
-    });
-    $(this).append(menuTip);
+    // selectedNode.append(menuTip);
     menuTip.click(function(){
     	if(!$(this).data('selected')){
     	  menuTipClick($(this));
@@ -70,9 +55,26 @@ $predicateNode.hover(
   }
 );
 
+// $('#column1 > .nodeWrapper').click(function(){
+//     var node = $(this);
+//     var toggle = node.data("nodeOpen");
+//     if(!toggle){
+//         rootNodeLink($('#rootNode'),node); 
+//         node.data("nodeOpen", true);  
+        
+//     }else{
+//         var lineToRemove = document.getElementById(lines[node.data('col2index')]);
+//         lineToRemove.remove();
+//         node.data("nodeOpen", false);
+        
+//     }   
+//     var pos = node.context.offsetTop;
+
+// });
 
 var menuTipClick = function(obj){
 	var selected = obj.parent().find('h4');
+  expandedNode = selected;
 	selected.css('background-color', 'orange');
 	obj.parent().data('selected', true);
 	$('.column:eq(1)').children().not('.openNode').show();

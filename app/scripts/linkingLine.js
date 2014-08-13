@@ -1,5 +1,6 @@
 var lineCount = 1;
 var lines = {};
+var expandedNode;
 
 var Line = function(len, angle, target){
     this.len = len;
@@ -20,32 +21,53 @@ var Line = function(len, angle, target){
     return this;
 };
 
-$('.nodeWrapper').click(function(){
+$('#column1 > .nodeWrapper').click(function(){
     var node = $(this);
-    var toggle = node.data("selected");
+    var toggle = node.data("nodeOpen");
     if(!toggle){
-
-        // TODO: keep track of lines and nodes in lines object above
-
-        rootNodeLink(node); 
-        node.data("selected", true);  
+        rootNodeLink($('#rootNode'),node); 
+        node.data("nodeOpen", true);  
         
     }else{
         var lineToRemove = document.getElementById(lines[node.data('col2index')]);
         lineToRemove.remove();
-        node.data("selected", false);
+        node.data("nodeOpen", false);
         
     }   
+
+    var pos = node.context.offsetTop;
+
 });
+
+$('#column2 > .nodeWrapper').click(function(){
+    var node = $(this);
+    console.log(expandedNode);
+    var toggle = node.data("nodeExpanded");
+    if(!toggle){
+        rootNodeLink(expandedNode, node); 
+        node.data("nodeExpanded", true);  
+        
+    }else{
+        var lineToRemove = document.getElementById(lines[node.data('col2index')]);
+        lineToRemove.remove();
+        node.data("nodeExpanded", false);
+        
+    }   
+
+    var pos = node.context.offsetTop;
+
+});
+
+
 
 // TODO : event handlers to fire when position changes
 
 // TODO : redraw lines function when event fires
 
-function rootNodeLink(target) {
+function rootNodeLink(origin, target) {
         lineCount++
-        var originX = $('#rootNode').offset().left + $('#rootNode').outerWidth() / 2;
-        var originY = $('#rootNode').offset().top + $('#rootNode').outerHeight() / 2; 
+        var originX = origin.offset().left + origin.outerWidth() / 2;
+        var originY = origin.offset().top + origin.outerHeight() / 2; 
 
         var destX = target.offset().left - 80;
         var destY = target.offset().top + target.outerHeight() / 2;
@@ -58,6 +80,7 @@ function rootNodeLink(target) {
             angle *= -1;
     
         var line = new Line(length, angle, target);
+
         lines[target.data('col2index')] = line.el[0].id
     
 

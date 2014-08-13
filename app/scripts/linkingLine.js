@@ -1,25 +1,49 @@
-$('.nodeWrapper').click(function(){
-    var toggle = $(this).data("selected");
-    var linkLine = $('<div></div>').appendTo('body');
-    linkLine
+var lineCount = 1;
+var lines = {};
+
+var Line = function(len, angle, target){
+    this.len = len;
+    this.angle = angle;
+    this.target = target;
+    this.el = $('<div></div>').appendTo('body');
+    this.el
+        .attr('id', 'line' + lineCount)
         .addClass('linkLine')
         .css('top', $('#rootNode').offset().top + $('#rootNode').outerWidth() / 2)
-        .css('left', $('#rootNode').offset().left + $('#rootNode').outerHeight());
+        .css('left', $('#rootNode').offset().left + $('#rootNode').outerHeight())
+        .css('height', this.len)
+        .css('-webkit-transform', 'rotate(' + this.angle + 'deg)')
+        .css('-moz-transform', 'rotate(' + this.angle + 'deg)')
+        .css('-o-transform', 'rotate(' + this.angle + 'deg)')
+        .css('-ms-transform', 'rotate(' + this.angle + 'deg)')
+        .css('transform', 'rotate(' + this.angle + 'deg)');
+    return this;
+};
+
+$('.nodeWrapper').click(function(){
+    var node = $(this);
+    var toggle = node.data("selected");
     if(!toggle){
-        rootNodeLink($(this)); 
-        $(this).data("selected", true);  
+
+        // TODO: keep track of lines and nodes in lines object above
+
+        rootNodeLink(node); 
+        node.data("selected", true);  
         
     }else{
-        $('.linkLine').remove();
-        $(this).data("selected", false);
+        var lineToRemove = document.getElementById(lines[node.data('col2index')]);
+        lineToRemove.remove();
+        node.data("selected", false);
         
     }   
 });
 
+// TODO : event handlers to fire when position changes
+
+// TODO : redraw lines function when event fires
+
 function rootNodeLink(target) {
-
-        
-
+        lineCount++
         var originX = $('#rootNode').offset().left + $('#rootNode').outerWidth() / 2;
         var originY = $('#rootNode').offset().top + $('#rootNode').outerHeight() / 2; 
 
@@ -33,12 +57,11 @@ function rootNodeLink(target) {
         if(destX > originX)
             angle *= -1;
     
-        $('.linkLine')
-            .css('height', length)
-            .css('-webkit-transform', 'rotate(' + angle + 'deg)')
-            .css('-moz-transform', 'rotate(' + angle + 'deg)')
-            .css('-o-transform', 'rotate(' + angle + 'deg)')
-            .css('-ms-transform', 'rotate(' + angle + 'deg)')
-            .css('transform', 'rotate(' + angle + 'deg)');
+        var line = new Line(length, angle, target);
+        lines[target.data('col2index')] = line.el[0].id
     
+
+       
+        
 }
+

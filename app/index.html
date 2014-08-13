@@ -11,13 +11,14 @@
         <!-- bower:css -->
         <!-- <link rel="stylesheet" href="../bower_components/foundation/css/foundation.css" /> -->
         <link rel="stylesheet" href="./scripts/vendor/jquery-ui-1.11.0/jquery-ui.min.css">
-        <link rel="stylesheet" href="http://cdn.jsdelivr.net/flexboxgrid/3.0.1/flexboxgrid.min.css">
+        <link rel="stylesheet" href="./scripts/vendor/flexboxgrid-3.0.1/css/flexboxgrid.css">
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
     </head>
+    
     <body>
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -28,10 +29,12 @@
             <header>
                 <div class="row">
                     <nav>
-                        <h3>Semtech Demo</h3>
                         <ul class="nav">
+                          <li><h3><a href="#">Semtech Demo</a></h3></li>
                           <li class="active"><a href="#">Home</a></li>
                           <li><a href="#">Browse History</a></li>
+                          <li><input type="text"></li>
+                          <li><button>Search</button></li>
                           <li><a href="#">Logout</a></li>
                         </ul>
                     </nav>
@@ -47,9 +50,6 @@
                 <div class="column-4-hand filterBox"></div>
 
             </div> 
-    
-           <canvas id="secondLevel" width="130" height="1000"></canvas>
-           <canvas id="thirdLevel" width="130" height="1000"></canvas>
 
            <section id="tree" class="row around-hand">
 
@@ -57,6 +57,7 @@
               <div id="rootNode">
                 <img src="./images/man_in_oriental_costume.jpg" alt="Man in Oriental Costume" height="75" width="60">
                 <h5>Man in Oriental Costume</h5>
+                <div id="rootPort"></div>
               </div>
             </div>
         
@@ -82,7 +83,7 @@
                   </ul>
               </div>
               
-              <div class="row nodeWrapper center"  data-col2Index="3">
+              <div class="row nodeWrapper center"  id="test" data-col2Index="3">
                    <div class="column-auto-hand node">Constituents</div>
                    <span class="arrow"></span>
               </div>
@@ -224,40 +225,6 @@
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-         <script>
-        //     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        //     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        //     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        //     e.src='//www.google-analytics.com/analytics.js';
-        //     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        //     ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-
-        <script>
-             // function writeMessage(canvas, message) {
-             //   var context = canvas.getContext('2d');
-             //   context.clearRect(0, 0, canvas.width, canvas.height);
-             //   context.font = '18pt Calibri';
-             //   context.fillStyle = 'black';
-             //   context.fillText(message, 10, 25);
-             // }
-             function getMousePos(canvas, evt) {
-               var rect = canvas.getBoundingClientRect();
-               return {
-                 x: evt.clientX - rect.left,
-                 y: evt.clientY - rect.top
-               };
-             }
-             var canvas = document.getElementById('secondLevel');
-             var context = canvas.getContext('2d');
-
-             canvas.addEventListener('click', function(evt) {
-               var mousePos = getMousePos(canvas, evt);
-               var message = mousePos.x + ',' + mousePos.y;
-               console.log(message);
-             }, false);
-           </script>
 
         <!-- build:js scripts/plugins.js -->
         

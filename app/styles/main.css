@@ -13,12 +13,12 @@
 }
 
 
-.browsehappy {
+/*.browsehappy {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
-}
+}*/
 
 h4{
     margin: 0;
@@ -29,46 +29,24 @@ h4{
     font-family: helvetica;
 
 }
-canvas#secondLevel{
-    position: absolute;
-    top: 263px;
-    left: 225px;
-    z-index: 3;
-    /*background-color: lightgrey;*/
-    
-}
 
-canvas#thirdLevel{
-    position: absolute;
-    top: 263px;
-    left: 682px;
-    z-index: 3;
-    /*background-color: lightgrey;*/
-    
-}
 
 /* Space out content a bit */
 body {
-    padding-top: 20px;
     padding-bottom: 20px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-header,
+/*header,
 .footer {
     padding: 30px;
-}
-
-/* Custom page header */
-header {
-
-}
+}*/
 
 /* Make the masthead heading the same height as the navigation */
-    header h3 {
+li h3 {
         margin-top: 0;
         margin-bottom: 0;
-        line-height: 40px;
+        line-height: 20px;
         padding-bottom: 5px;
     }
 
@@ -87,7 +65,7 @@ header {
 .nav ul{
     width: 100%;
     float: left;
-    margin: 0 0 3em 0;
+    margin: auto;
     padding: 0;
     list-style: none;
     background-color: #f2f2f2;
@@ -96,7 +74,6 @@ header {
 }
 .nav li {
     list-style: none;
-
     float: left; 
 }
 
@@ -113,8 +90,8 @@ header {
 
 /* MAIN */
 #tree{
-    height: 1000px;
-    padding-top: 20px;
+    height: auto;
+    padding-top: 10px;
 }
 
 .column{
@@ -141,6 +118,14 @@ header {
     padding: 10px 10px 5px;
     z-index: 3;
 }
+
+
+/*#rootPort{
+    position: relative;
+    height: 25px;
+    width: 25;
+
+}*/
 
 .node{
     font-size: 1.2em;
@@ -335,10 +320,10 @@ header {
     }
 
     /* Space out the masthead */
-    .header {
+/*    .header {
         margin-bottom: 30px;
     }
-    
+    */
     /* Remove the bottom border on the jumbotron for visual effect */
     .jumbotron {
         border-bottom: 0;
